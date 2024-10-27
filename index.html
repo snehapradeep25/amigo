@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Amigo!</h1>
+        
+        <div class="input-group">
+            <label for="project-path">Select Your Project File:</label>
+            <input type="file" id="project-path" />
+            <button id="openFileButton"></button> <!-- Button to open file -->
+        </div>
+
+        <div class="input-group">
+            <label for="openWith">Open With:</label>
+            <select id="openWith">
+                <option value="vscode">Visual Studio Code</option>
+                <option value="other">Other Application</option>
+            </select>
+            <button id="openWithButton">Open</button> <!-- Button for Open With feature -->
+        </div>
+        
+        <div class="input-group">
+            <label for="timer">Set Timer (in hours, up to 48):</label>
+            <input type="number" id="timer" min="1" max="48" />
+            <button id="start-timer">Start Timer</button> <!-- Button to start the timer -->
+        </div>
+
+        <div id="file-path"></div> <!-- Display selected file path -->
+        <div id="errorMessage"></div> <!-- Display error count -->
+        <div id="terminal"></div> <!-- Terminal for snarky remarks -->
+    </div>
+    
+    <script src="renderer.js"></script>
+</body>
+</html>
